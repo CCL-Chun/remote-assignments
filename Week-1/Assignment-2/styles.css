@@ -1,0 +1,92 @@
+/* styles.css */
+/* header part */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgrey;
+}
+
+header a {
+    margin: 5px;
+}
+
+/* welcome message part */
+.welcome-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background-color: #CFDDEC;
+}
+
+/* section title */
+.content {
+    max-width: 1200px; /* max width of content boxes should be fixed in 1200px */
+    margin: auto; /* align section part to center */
+}
+
+.content h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* content boxes */
+.content-box {
+    display: grid; /* grid display */
+    /*border: 1px solid;*/ /* border for testing */
+    grid-template-columns: 1fr 1fr; /* set two columns */
+    grid-template-rows: 1fr 1fr; /* set two rows */
+    column-gap: 0px;
+    row-gap:10px;
+    align-content: center;
+    justify-items: center; /* make box center */
+    padding:5px 5em;
+}
+
+.box {
+    background-color: #8D9BAA;
+    height: 100px;
+    width: 400px;
+    text-align: center /* make character center top*/
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        justify-content: center;
+    }
+    .box {
+        padding: 0.5em;
+        max-width: 200px; 
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .content {
+        justify-content: center;
+    }
+    .box {
+        padding: 0.5em;
+        max-width: 100px; 
+    }
+}
+
+/* bottom call to action part */
+.bottom {
+    display: flex;
+    background-color: #CFDDEC;
+    height: 35px;
+    width: 80px;
+    font-size: 12px;
+    margin: auto;
+    justify-content:center;
+    align-items: center;
+}
