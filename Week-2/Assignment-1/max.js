@@ -8,10 +8,8 @@ function max(numbers){
     while(start < numbers.length){
         if(num < numbers[start]){
             num = numbers[start]; // renew a larger num 
-            start++; // step to next element
-        } else{
-            start++; // step to next element
         }
+        start++; // step to next element
     }
     return num; // return the max num
 }
