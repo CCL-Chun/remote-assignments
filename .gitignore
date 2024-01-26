@@ -2,3 +2,4 @@
 .vscode
 jsconfig.json
 .venv/
+__pycache__/
