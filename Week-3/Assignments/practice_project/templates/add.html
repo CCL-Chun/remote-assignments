@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Adding page</title>
+    </head>
+    <body>
+        <h1>Calculate &Sigma;n</h1>
+        Enter your number: <input type="number" id="numInput" />
+        <button class="calcButton">calculate now</button>
+        <section class="resultSection">
+            <h3 id="resultTitle"></h3>
+            <p id="sigmaResult"></p>
+        </section>
+
+        <script>
+            document.querySelector(".calcButton").addEventListener("click", function(){
+                const numInput = document.querySelector("#numInput").value;
+                const sigmaResult = document.querySelector("#sigmaResult");
+                const resultTitle = document.querySelector("#resultTitle");
+                const resultSection = document.querySelector(".resultSection");
+
+                if(numInput){
+                    resultTitle.innerHTML = '&Sigma;n, from 1 to ' + numInput + ' is:';
+                    fetch(`/data?number=${numInput}`) //use `` here
+                        .then(function(response){
+                            return response.text(); //return first
+                        })
+                        .then(function(data){
+                            sigmaResult.textContent = data;
+                            resultSection.removeAttribute("style");
+                        })
+                        .catch(function(error){
+                            console.error(error);
+                            resultSection.style.display = "none";
+                        })
+                }
+                else{
+                    resultSection.style.display = "none";  
+                }
+            })
+        </script>
+    </body>
+</html>

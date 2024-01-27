@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Adding page</title>
+    </head>
+    <body>
+        <div class="enterName">
+            <div class="new">
+                <img id="heyThere" src="/static/img/hey_there.png" style="width:780px;height:690px" />
+            </div>
+            <div class="block">
+                <form action="{{ url_for('trackName') }}" method="POST">
+                    <label>Hey new user! What's your name?</label>
+                    <input type="text" name="name" value="" autofocus>
+                    <input type="submit" value="Click">
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>
