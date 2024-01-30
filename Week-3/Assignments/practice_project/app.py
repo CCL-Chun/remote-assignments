@@ -10,7 +10,7 @@ def get_cookies():
         data = {}
     return data
 
-@app.route("/")
+@app.route("/sum.html")
 def add():
     return render_template("add.html")
 
