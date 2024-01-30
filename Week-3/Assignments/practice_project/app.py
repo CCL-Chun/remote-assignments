@@ -26,7 +26,7 @@ def sigma():
     if num_int <= 0: #only accept positive integer
         return "Don't put any negative value or zero."
 
-    result = sum(range(1, num_int, 1)) #sigma sum
+    result = sum(range(num_int + 1)) #sigma sum
     return str(result) #return a string is important
 
 @app.route('/myName')
