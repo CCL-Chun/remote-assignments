@@ -3,3 +3,5 @@
 jsconfig.json
 .venv/
 __pycache__/
+config.ini
+pymysql_test.py

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+    </head>
+    <body>
+        <div class="Sign-in">
+            <div class="pic">
+                <img id="heyThere" src="/static/img/hey_there.png" style="width:520px;height:460px" />
+            </div>
+            <div class="upper">
+                <h2>Sign-Up</h2>
+                <a href="{{ url_for('sign_in') }}">Sign-in</a>
+                <a href="{{ url_for('sign_up') }}" class="active">Sign-up</a>
+            </div>
+            <div class="block">
+                <form action="{{ url_for('sign_up') }}" method="POST">
+                    <label for="email"></label>
+                    <input type="text" name="email" placeholder="Email address" id="email" required>
+                    <label for="username"></label>
+                    <input type="text" name="username" placeholder="Username" id="username" required>
+                    <label for="password"></label>
+                    <input type="text" name="password" placeholder="Password" id="password" required>
+                    <label for="age"></label>
+                    <input type="int" name="age" placeholder="Age" id="age" required>
+                    <div class="msg">{{ msg }}</div>
+                    <input type="submit" value="Sign-Up">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
