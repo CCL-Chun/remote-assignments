@@ -1,5 +1,4 @@
 import configparser
-from sqlite3 import Cursor
 from flask import Flask, g
 import pymysql
 
@@ -36,11 +35,3 @@ def close_db(error):
         db.close()
 
 from app import routes
-
-# with app.app_context():
-#     cursor = get_dict_cursor()
-#     cursor.execute(
-#         'SELECT * FROM user WHERE email = %s AND password = %s',
-#         ('fsdkmmfv','ffagva',))
-#     result = cursor.fetchone()
-#     print(result)
