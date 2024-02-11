@@ -37,3 +37,35 @@ remote: Please see https://docs.github.com/en/get-started/getting-started-with-g
 ```
 git config --global credential.helper osxkeychain
 ```
+
+# Connecting to GitHub using SSH keys
+* convenient authentication for one or more github accounts
+1. First generate your SSH key pair
+```
+ssh-keygen \
+  -t rsa \ 
+  -b 4096 \ # 4096 bits encrpytion
+  -C "XXX@gmail.com" # optional / comment for your account email
+```
+  - the key file id\_rsa saved in ~/.ssh by default
+  - enter passphrase or keep it empty to next step
+2. Put the public key(~/.ssh/id\_rsa.pub) to GitHub(Add new SSH Key)
+3. Setup the config file
+```
+Host            kevin-github
+HostName        github.com
+User            git
+IdentityFile    ~/.ssh/id_rsa
+IdentitiesOnly  yes
+```
+4. Check the setting
+```
+ssh -T git@kevin-github
+# result
+Hi CCL-Chun! You've successfully authenticated, but GitHub does not provide shell access.
+```
+5. Finally, change the HTTPS to SSH authentication
+```
+git remote set-url origin git@kevin-github:CCL-Chun/test.git
+```
+
