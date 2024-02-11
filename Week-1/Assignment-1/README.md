@@ -64,8 +64,8 @@ ssh -T git@kevin-github
 # result
 Hi CCL-Chun! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-5. Finally, change the HTTPS to SSH authentication
+5. Finally, change the HTTPS to SSH url for authentication
 ```
 git remote set-url origin git@kevin-github:CCL-Chun/test.git
 ```
-
+  - change test.git to the repo url
