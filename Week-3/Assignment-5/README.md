@@ -13,7 +13,7 @@ def twoSum(nums, target):
                 return answer
             n2 += 1
 ```
-* time complexity \(O(n^2)\)
+* time complexity $\(O(n^2)\)$
 ## Better way
   - use hash table (dict in python) to store the number and its index
   - search the complement for the target or save them into dict if not found
@@ -27,5 +27,5 @@ def twoSum(nums, target):
         num_map[num] = index  # store index of the current number
     return []  # return an empty list if no solution is found
 ```
-* time complexity \(O(n)\)
+* time complexity $\(O(n)\)$
 * only walk through the number sequence one time and check if the complement had been saved in dict
